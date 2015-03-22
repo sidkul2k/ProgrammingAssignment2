@@ -1,31 +1,15 @@
-#creates a vector for x matrix & its inverse
+## Put comments here that give an overall description of what your
+## functions do
 
-makeCacheMatrix <- function(x<-matrix())
-{
-  xin<-NULL #inverse
-  set<-function() #sets the matrix in global env
-  {
-    x<<-y
-    xin<<-NULL
-  }
-  get<-function() x #returns the matrix
-  setinverse <- function(inverse) xin<<-inverse #sets inverse
-  getinverse <- function(inverse) xin #gets inverse
-  
-  list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
+## Write a short comment describing this function
+
+makeCacheMatrix <- function(x = matrix()) {
+
 }
 
 
-#function solves matrix, takes vector as input
-cacheSolve <- function(x,...)
-{
-  xin<-x$getinverse()
-  if(!is.null(xin)){
-    message("getting cached data")
-    return(xin)
-  }
-  mtx<-x$get()
-  xin<-solve(mtx)
-  x$setinverse(xin)
-  xin #returns inverse of x
+## Write a short comment describing this function
+
+cacheSolve <- function(x, ...) {
+        ## Return a matrix that is the inverse of 'x'
 }
